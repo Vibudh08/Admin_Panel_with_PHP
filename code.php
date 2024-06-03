@@ -19,14 +19,12 @@ if(isset($_POST['addUser'])){
         $_SESSION['status'] = "Email already registered";
         header('location:register.php');
 
-    }else{
-        if(empty($name) or empty($email) or empty($phone) or empty($password) or empty($c_password)){
+    }elseif(empty($name) or empty($email) or empty($phone) or empty($password) or empty($c_password)){
             $_SESSION['status'] = "Please fill all fields";
             header('location:register.php');
             
             // echo "fill all fields";
-        }else{
-            if($password != $c_password){
+        }elseif($password != $c_password){
                 $_SESSION['status'] = "Passwords don't match";
                 header('location:register.php');
                 
@@ -47,9 +45,7 @@ if(isset($_POST['addUser'])){
                 }
             }
         }
-    }
-
-}
+    
 
 // FOR UPDATING USER
 

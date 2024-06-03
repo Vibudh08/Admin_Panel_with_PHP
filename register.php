@@ -37,7 +37,7 @@ include('config/dbcon.php');
 
                             <label for="">Password</label>
                             <div class="input-group mb-3">
-                                <input class="form-control password" id="password" class="block mt-1 w-full" type="password" name="password" placeholder="Password" required />
+                                <input class="form-control password" id="password" class="block mt-1 w-full" type="password" name="password" placeholder="Password" />
                                 <span  class="input-group-text togglePassword" id="eye" style="cursor: pointer">
                                     <i class="fa fa-eye" style="cursor: pointer"></i>
                                 </span>
@@ -50,7 +50,7 @@ include('config/dbcon.php');
                         <div class="form-group">
                             <label for="">Confirm Password</label><br>
                             <div class="input-group mb-3">
-                                <input class="form-control password" id="c_password" class="block mt-1 w-full" type="password" name="c_password" placeholder="Password" required />
+                                <input class="form-control password" id="c_password" class="block mt-1 w-full" type="password" name="c_password" placeholder="Password" />
                                 <span  class="input-group-text togglePassword" id="ceye" style="cursor: pointer">
                                     <i class="fa fa-eye" style="cursor: pointer"></i>
                                 </span>
