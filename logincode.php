@@ -8,12 +8,15 @@ if(isset($_POST['login_btn'])){
 
     $sql = "SELECT * FROM user WHERE email='$email'";
     $result = mysqli_query($conn, $sql);
+    print_r($result);
     $row = mysqli_num_rows($result);
+
+
 
     if($row){
 
         $data = $result->fetch_assoc();
-        
+
         if($data['password'] != $password){
             $_SESSION['status'] = "Password is wrong";
             header('location:login.php');
@@ -29,9 +32,13 @@ if(isset($_POST['login_btn'])){
             $_SESSION['id'] = $id;
             $_SESSION['status'] = "Welcome $name";
             header('location:index.php');
-            
-        }
 
+        }
+    }
+    elseif(empty($email)&& empty($password)){
+    $_SESSION['status'] = "Field is empty";
+    header('location:login.php');
+    
     }else{
         $_SESSION['status'] = "Email is not registered";
         header('location:login.php');
